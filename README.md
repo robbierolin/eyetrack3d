@@ -5,20 +5,16 @@ The purpose of this project is to explore the feasibility of Convolutional Neura
 An image-based solution has the benefits of being lightweight and flexible, which is of particular importance considering the growing number of AR/VR devices. In the project we use an image of each of the left and right eyes to predict gaze location.
 
 ## Data Collection
-Eye images were captured at 5Hz using a SMI eyetracker installed in an Oculus DK2 which captures left and right eye images asynchronously.
+Eye images were captured at 5Hz using a SMI eyetracker installed in an Oculus DK2 which captures left and right eye images asynchronously. Each eye image is 320 x 240.
 
 Using OpenGL, a red cube with side length 0.1 moved around a black background while eye images were captured.  The cube moved between two randomly chosen points with a collection volume over the course of 2 seconds.  The collection volume had coordinate 0.2 x 0.2 x 1.8 and was head relative
 
-The data collection session lasted 10 minutes and produced 3016 left and right eye images.
+The data collection session lasted 10 minutes and produced 3016 left and right eye images (~2.3 GB).
 
-<video width="640" height="240" controls> 
-  <source src="res/eyevideo.mp4" type="video/mp4">
-  Browser not supporting video, see <a href="res/eyevideo.mp4">res/eyevideo.mp4</a>
-</video>
-<img src="/res/eyevideo1.gif" width="400" alt="Data">
+<img src="/res/eyevideo.gif" width="400" alt="Data">
 
 ## Preprocessing
-* Since left and right eye images and the cube positions were captured asynchronously, timestamps were used to create data points of the form (I_l, I_r, p) where I_l, and I_r are left and right eye images, respectively, and p is the position of the cube at close points in time.
+* Since left and right eye images and the cube positions were captured asynchronously, timestamps were used to create data points of the form (<em>I<sub>l</sub></em>, <em>I<sub>r</sub></em>, <em>p</em>) where <em>I<sub>l</sub></em>, and <em>I<sub>r</sub></em> are left and right eye images, respectively, and <em>p</em> is the position of the cube at close points in time.
 * To account for saccades, we removed the first two data points of images that occurred after the cube started on its path between two points in the collection volume. 
 * Images were manually scanned to remove those with blinks.
 * The data was normalized by subtracting the mean and dividing by the standard deviation for each pixel.
@@ -37,12 +33,12 @@ We learn a two-stream convolutional neural network. Each stream takes an image o
 
 The two streams have identical architectures which are as follows:
 
-    Layer 1: CONV2 5 (10x10) filters
-    Layer 2: CONV2 5 (10x10) filters
-    Layer 3: MAXPOOL (2x2) pool
+    Layer 1: CONV2 5 (20x20) filters
+    Layer 2: MAXPOOL (2x2) pool
+    Layer 3: CONV2 5 (3x3) filters
     Layer 4: CONV2 5 (3x3) filters
-    Layer 5: CONV2 5 (3x3) filters
-    Layer 6: MAXPOOL (2x2) pool
+    Layer 5: MAXPOOL (2x2) pool
+    Layer 6: CONV2 10 (3x3) filters
     Layer 7: CONV2 10 (3x3) filters
     Layer 8: CONV2 10 (3x3) filters
     Layer 9: MAXPOOL (2x2) pool
@@ -87,4 +83,8 @@ To see what the network learned we run gradient ascent on noise images to maximi
 
 ## Conclusions
 
-These are really good results.  Knowledge of eye behaviours (i.e. saccades and pursuits) could easily be incorporated into time-series models built on top of these predictions to create robust, accurate trackers. Deep sequence models (e.g. LSTM) could also be used to learn this behaviour. Higher frequency capture devices would likely be needed. 
+These are really good results.  We have shown that it's possible to learn meaningful eye tracking features using Convolutional Neural Networks. A usable model for a wide variety of settings would likely need to be trained on more varied training data. 
+
+Knowledge of eye behaviours (i.e. saccades and pursuits) could easily be incorporated into time-series models built on top of these predictions to create robust, accurate trackers. Deep sequence models (e.g. LSTM) could also be used to learn this behaviour. Higher frequency capture devices would likely be needed. 
+
+
