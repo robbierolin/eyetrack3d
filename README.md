@@ -26,6 +26,7 @@ There were X images after preprocessing.  These were randomly split int X1 train
 We can plot the cube positions of our data to see how well distributed it is.
 
 [train]: https://github.com/robbierolin/eyetrack3d/blob/master/res/train.png "Training Data"
+[train]: /res/train.png "Training Data"
 [val]: https://github.com/robbierolin/eyetrack3d/blob/master/res/val.png "Validation Data"
 [test]: https://github.com/robbierolin/eyetrack3d/blob/master/res/test.png "Test Data"
 ![Training Distribution] [train]
