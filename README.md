@@ -13,7 +13,7 @@ The data collection session lasted 10 minutes and produced 3016 left and right e
 
 <video width="640" height="240" controls> 
   <source src="res/eyevideo.mp4" type="video/mp4">
-  Browser not supporting video, see `res/eyevideo.mp4`
+  Browser not supporting video, see ![res/eyevideo.mp4](res/eyevideo.mp4)
 </video>
 
 
