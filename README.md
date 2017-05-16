@@ -61,7 +61,7 @@ Training took X.Y hours on my GTX 980.
 
 Here are some plots of mean squared error and mean absolute error, measures of how far away our predictions are.
 
-<img src="/res/train.png" width="400" alt="Training Data Distribution"><img src="/res/val.png" width="400" alt="Validation Data Distribution"><img src="/res/test.png" width="400" alt="Test Data Distribution"><img src="/res/test.png" width="400" alt="Test Data Distribution">
+<img src="/res/train_loss.png" width="300" alt="Training Loss"><img src="/res/train_mae.png" width="300" alt="Training Mean Absolute Error"><img src="/res/val_loss.png" width="300" alt="Validation Loss"><img src="/res/val_mae.png" width="300" alt="Validation Mean Absolute Error">
 
 The network reached the following metrics during training
 * MSE_train: 
