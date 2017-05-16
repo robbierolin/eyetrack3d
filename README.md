@@ -20,7 +20,7 @@ The data collection session lasted 10 minutes and produced 3016 left and right e
 * The data was normalized by subtracting the mean and dividing by the standard deviation for each pixel.
 * Output data was normalized to [0,1] in each dimension
 
-There were 2695 images after preprocessing (11% removed).  These were randomly split int 1887 training data 404 validation data and 404 test data (70:15:15)
+There were 2695 images after preprocessing (11% removed).  These were randomly split into 1887 training data, 404 validation data, and 404 test data (70:15:15)
 
 We can plot the cube positions of our data to see how well distributed it is.
 
@@ -33,20 +33,20 @@ We learn a two-stream convolutional neural network. Each stream takes an image o
 
 The two streams have identical architectures which are as follows:
 
-    Layer 1: CONV2 5 (20x20) filters
-    Layer 2: MAXPOOL (2x2) pool
-    Layer 3: CONV2 5 (3x3) filters
-    Layer 4: CONV2 5 (3x3) filters
-    Layer 5: MAXPOOL (2x2) pool
-    Layer 6: CONV2 10 (3x3) filters
-    Layer 7: CONV2 10 (3x3) filters
-    Layer 8: CONV2 10 (3x3) filters
-    Layer 9: MAXPOOL (2x2) pool
+    Layer 1: CONV2_1 5 (20x20) filters
+    Layer 2: MAXPOOL_1 (2x2) pool
+    Layer 3: CONV2_2 5 (3x3) filters
+    Layer 4: CONV2_3 5 (3x3) filters
+    Layer 5: MAXPOOL_2 (2x2) pool
+    Layer 6: CONV2_4 10 (3x3) filters
+    Layer 7: CONV2_5 10 (3x3) filters
+    Layer 8: CONV2_6 10 (3x3) filters
+    Layer 9: MAXPOOL_3 (2x2) pool
 
 This gives a total of 81493 parameters, with 72003 from the fully connected layer and 4745 from each eye stream.
 
 ## Training 
-After some tedious manual searching, the network was the following properties
+After some tedious manual searching, the network was the following properties:
 * Optimizer: Adadelta (standard parameters)
 * batch_size: 1
 * epochs: 15
