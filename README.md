@@ -14,7 +14,7 @@ The data collection session lasted 10 minutes and produced 3016 left and right e
 <img src="/res/eyevideo.gif" width="400" alt="Data">
 
 ## Preprocessing
-* Since left and right eye images and the cube positions were captured asynchronously, timestamps were used to create data points of the form (<em>I<sub>l</sub></em>, <em>I<sub>r</sub></em>, <em>p</em>) where <em>I<sub>l</sub></em>, and <em>I<sub>r</sub></em> are left and right eye images, respectively, and <em>p</em> is the position of the cube at close points in time.
+* Since left and right eye images and the cube positions were captured asynchronously, timestamps were used to create data points of the form (<em>I<sub>L</sub></em>, <em>I<sub>R</sub></em>, <em>p</em>) where <em>I<sub>L</sub></em>, and <em>I<sub>R</sub></em> are left and right eye images, respectively, and <em>p</em> is the position of the cube at close points in time.
 * To account for saccades, we removed the first two data points of images that occurred after the cube started on its path between two points in the collection volume. 
 * Images were manually scanned to remove those with blinks.
 * The data was normalized by subtracting the mean and dividing by the standard deviation for each pixel.
