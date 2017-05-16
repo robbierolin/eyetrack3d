@@ -31,6 +31,7 @@ We can plot the cube positions of our data to see how well distributed it is.
 ![Training Distribution][train]
 ![Validation Distribution][val]
 ![Testing Distribution][test]
+<img src="/res/train.png" width="200">
 
 Looks good.
 
