@@ -13,7 +13,9 @@ The data collection session lasted 10 minutes and produced 3016 left and right e
 
 [eyevideo]: https://github.com/robbierolin/eyetrack3d/blob/master/res/eyevideo.mp4 "Training Images"
 ![Data collection eye video][eyevideo]
-<video controls> <source src="/res/eyevideo.mp4" type="video/mp4"></video>
+<video width="640" height="240" controls> 
+  <source src="/res/eyevideo.mp4" type="video/mp4">
+</video>
 <video control src="res/eyevideo.mp4" type="video/mp4">
 
 ## Preprocessing
