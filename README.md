@@ -1,23 +1,19 @@
-# Readme - Eyetrack
+# Eyetrack
 
 The purpose of this project is to explore the feasibility of Convolutional Neural Networks for 3D gaze estimation. The goal of 3D gaze estimation is to determine the 3D point in space that a person is looking at. 
 
-An image-based solution has the benefits of being lightweight and flexible, which is of particular importance considering the growing number of AR/VR devices.
+An image-based solution has the benefits of being lightweight and flexible, which is of particular importance considering the growing number of AR/VR devices. In the project we use an image of each of the left and right eyes to predict gaze location.
 
 ## Data Collection
-Eye images were captured at 5Hz using a SMI eyetracker installed in an Oculus DK2.  
+Eye images were captured at 5Hz using a SMI eyetracker installed in an Oculus DK2 which captures left and right eye images asynchronously.
 
-Using OpenGL, a red cube with side length 0.1 moved around a black background while eye images were captured.  The cube moved between two randomly chosen points with a collection volume.  The collection volume had coordinate 0.2 x 0.2 x 1.8 and was head relative
+Using OpenGL, a red cube with side length 0.1 moved around a black background while eye images were captured.  The cube moved between two randomly chosen points with a collection volume over the course of 2 seconds.  The collection volume had coordinate 0.2 x 0.2 x 1.8 and was head relative
 
 The data collection session lasted 10 minutes and produced 3016 left and right eye images.
 
-[eyevideo]: https://github.com/robbierolin/eyetrack3d/blob/master/res/eyevideo.mp4 "Training Images"
-![Data collection eye video][eyevideo]
-
-
 <video width="640" height="240" controls> 
   <source src="res/eyevideo.mp4" type="video/mp4">
-  Browser not supporting video.
+  Browser not supporting video, see `res/eyevideo.mp4`
 </video>
 
 
@@ -28,7 +24,7 @@ The data collection session lasted 10 minutes and produced 3016 left and right e
 * The data was normalized by subtracting the mean and dividing by the standard deviation for each pixel.
 * Output data was normalized to [0,1] in each dimension
 
-There were X images after preprocessing.  These were randomly split int X1 training data X2 validation data and X3 test data (70:15:15)
+There were 2695 images after preprocessing (11% removed).  These were randomly split int 1887 training data 404 validation data and 404 test data (70:15:15)
 
 We can plot the cube positions of our data to see how well distributed it is.
 
@@ -51,6 +47,7 @@ The two streams have identical architectures which are as follows:
     Layer 8: CONV2 10 (3x3) filters
     Layer 9: MAXPOOL (2x2) pool
 
+This gives a total of X parameters.
 
 ## Training 
 After some tedious manual searching, the network was the following properties
@@ -64,7 +61,7 @@ Training took X.Y hours on my GTX 980.
 
 Here are some plots of mean squared error and mean absolute error, measures of how far away our predictions are.
 
-[IMAGE][IMAGE][IMAGE]
+<img src="/res/train.png" width="400" alt="Training Data Distribution"><img src="/res/val.png" width="400" alt="Validation Data Distribution"><img src="/res/test.png" width="400" alt="Test Data Distribution"><img src="/res/test.png" width="400" alt="Test Data Distribution">
 
 The network reached the following metrics during training
 * MSE_train: 
