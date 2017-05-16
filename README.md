@@ -14,6 +14,7 @@ The data collection session lasted 10 minutes and produced 3016 left and right e
 [eyevideo]: https://github.com/robbierolin/eyetrack3d/blob/master/res/eyevideo.mp4 "Training Images"
 ![Data collection eye video][eyevideo]
 <video controls> <source src="/res/eyevideo.mp4" type="video/mp4"></video>
+<video control src="res/eyevideo.mp4" type="video/mp4">
 
 ## Preprocessing
 * Since left and right eye images and the cube positions were captured asynchronously, timestamps were used to create data points of the form (I_l, I_r, p) where I_l, and I_r are left and right eye images, respectively, and p is the position of the cube at close points in time.
