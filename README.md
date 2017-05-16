@@ -25,9 +25,7 @@ There were X images after preprocessing.  These were randomly split int X1 train
 
 We can plot the cube positions of our data to see how well distributed it is.
 
-<img src="/res/train.png" width="400" alt="Training Data Distribution">
-<img src="/res/val.png" width="400" alt="Validation Data Distribution">
-<img src="/res/test.png" width="400" alt="Test Data Distribution">
+<img src="/res/train.png" width="400" alt="Training Data Distribution"><img src="/res/val.png" width="400" alt="Validation Data Distribution"><img src="/res/test.png" width="400" alt="Test Data Distribution">
 
 Looks good.
 
