@@ -47,31 +47,31 @@ The two streams have identical architectures which are as follows:
     Layer 8: CONV2 10 (3x3) filters
     Layer 9: MAXPOOL (2x2) pool
 
-This gives a total of X parameters.
+This gives a total of 81493 parameters, with 72003 from the fully connected layer and 4745 from each eye stream.
 
 ## Training 
 After some tedious manual searching, the network was the following properties
 * Optimizer: Adadelta (standard parameters)
 * batch_size: 1
 * epochs: 
-* regularization: only on the last layer (L2, \lambda = 10^{-4})
+* regularization: only on the last layer (L2, lambda = 10<sup>-4</sup>)
 * loss: Mean-squared error
 
-Training took X.Y hours on my GTX 980.
+Training took less than 10 minutes on my GTX 980.
 
 Here are some plots of mean squared error and mean absolute error, measures of how far away our predictions are.
 
 <img src="/res/train_loss.png" width="300" alt="Training Loss"><img src="/res/train_mae.png" width="300" alt="Training Mean Absolute Error"><img src="/res/val_loss.png" width="300" alt="Validation Loss"><img src="/res/val_mae.png" width="300" alt="Validation Mean Absolute Error">
 
 The network reached the following metrics during training
-* MSE_train: 
-* MAE_train:
-* MSE_val:
-* MAE_val:
+* MSE_train: 0.0036
+* MAE_train: 0.0361
+* MSE_val: 0.0092
+* MAE_val: 0.0580
 
 ## Results
-* MSE_test:
-* MAE_test:
+* MSE_test: 0.0066
+* MAE_test: 0.0539
 
 Here is how the network performed on the unseen test data. 
 [VIDEO]
