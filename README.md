@@ -11,8 +11,8 @@ Using OpenGL, a red cube with side length 0.1 moved around a black background wh
 
 The data collection session lasted 10 minutes and produced 3016 left and right eye images.
 
-[eyevideo]: https://github.com/robbierolin/eyetrack3d/res/eyevideo.avi "Training Images"
-![alt text][eyevideo]
+[eyevideo]: https://github.com/robbierolin/eyetrack3d/blob/master/res/eyevideo.avi "Training Images"
+![Data collection eye video][eyevideo]
 
 ## Preprocessing
 * Since left and right eye images and the cube positions were captured asynchronously, timestamps were used to create data points of the form (I_l, I_r, p) where I_l, and I_r are left and right eye images, respectively, and p is the position of the cube at close points in time.
@@ -25,12 +25,13 @@ There were X images after preprocessing.  These were randomly split int X1 train
 
 We can plot the cube positions of our data to see how well distributed it is.
 
-[train]: https://github.com/robbierolin/eyetrack3d/res/train.png "Training Data"
-[val]: https://github.com/robbierolin/eyetrack3d/res/val.png "Validation Data"
-[test]: https://github.com/robbierolin/eyetrack3d/res/test.png "Test Data"
-![alt text] [train]
-![alt text] [val]
-![alt text] [test]
+[train]: https://github.com/robbierolin/eyetrack3d/blob/master/res/train.png "Training Data"
+[val]: https://github.com/robbierolin/eyetrack3d/blob/master/res/val.png "Validation Data"
+[test]: https://github.com/robbierolin/eyetrack3d/blob/master/res/test.png "Test Data"
+![Training Distribution] [train]
+![Validation Distribution] [val]
+![Testing Distribution] [test]
+
 Looks good.
 
 ## Model
