@@ -15,7 +15,7 @@ The data collection session lasted 10 minutes and produced 3016 left and right e
   <source src="res/eyevideo.mp4" type="video/mp4">
   Browser not supporting video, see <a href="res/eyevideo.mp4">res/eyevideo.mp4</a>
 </video>
-
+<img src="/res/eyevideo1.gif" width="400" alt="Data">
 
 ## Preprocessing
 * Since left and right eye images and the cube positions were captured asynchronously, timestamps were used to create data points of the form (I_l, I_r, p) where I_l, and I_r are left and right eye images, respectively, and p is the position of the cube at close points in time.
