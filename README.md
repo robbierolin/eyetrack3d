@@ -70,9 +70,11 @@ The network reached the following metrics during training
 * MAE_test: 0.0539
 
 Here is how the network performed on the unseen test data. 
+
 <img src="/res/TestData.gif" width="500" alt="Performance on test data">
 
 And here is how it performs over all the data in order.
+
 <img src="/res/AllData-resized.gif" width="500" alt="Performance on all data">
 
 ## Visualizing Network
