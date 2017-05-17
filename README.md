@@ -46,8 +46,8 @@ The two streams have identical architectures which are as follows:
 This gives a total of 81493 parameters, with 72003 from the fully connected layer and 4745 from each eye stream.
 
 ## Training 
-After some tedious manual searching, the network was the following properties:
-* Optimizer: Adadelta (standard parameters)
+After some tedious manual searching, the network was trained with the following properties:
+* optimizer: Adadelta (standard parameters)
 * batch_size: 1
 * epochs: 15
 * regularization: only on the last layer (L2, lambda = 10<sup>-4</sup>)
