@@ -101,11 +101,10 @@ CONV2_6
 
 <img src="/res/conv_7_right_filter_2.png" width="300">
 
-[IMAGE][IMAGE][IMAGE]
 
 ## Conclusions
 
-These are really good results.  We have shown that it's possible to learn meaningful eye tracking features using Convolutional Neural Networks. A usable model for a wide variety of settings would likely need to be trained on more varied training data. 
+These are really nice results.  We have shown that it's possible to learn meaningful eye tracking features using Convolutional Neural Networks. A usable model for a wide variety of settings would likely need to be trained on more varied training data. 
 
 Knowledge of eye behaviours (i.e. saccades and pursuits) could easily be incorporated into time-series models built on top of these predictions to create robust, accurate trackers. Deep sequence models (e.g. LSTM) could also be used to learn this behaviour. Higher frequency capture devices would likely be needed. 
 
