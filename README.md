@@ -82,18 +82,23 @@ And here is how it performs over all the data in order.
 To see what the network learned we run gradient ascent on noise images to maximize the activations of each neuron in our network. These are some that were the most activated.
 
 CONV2_1
-<img src="/res/conv_1_left_filter_1.png" width="300"><img src="/res/conv_1_left_filter_3.png" width="300">
+
+<img src="/res/conv_1_left_filter_1.png" width="300"> <img src="/res/conv_1_left_filter_3.png" width="300">
 
 CONV2_2
-<img src="/res/conv_3_left_filter_0.png" width="300"><img src="/res/conv_3_left_filter_3.png" width="300"><img src="/res/conv_1_right_filter_2.png" width="300">
+
+<img src="/res/conv_3_left_filter_0.png" width="300"> <img src="/res/conv_3_left_filter_3.png" width="300"> <img src="/res/conv_3_right_filter_2.png" width="300">
 
 CONV2_4
-<img src="/res/conv_5_left_filter_8.png" width="300"><img src="/res/conv_5_right_filter_8.png" width="300">
+
+<img src="/res/conv_5_left_filter_8.png" width="300"> <img src="/res/conv_5_right_filter_8.png" width="300">
 
 CONV2_5
+
 <img src="/res/conv_6_left_filter_4.png" width="300">
 
 CONV2_6
+
 <img src="/res/conv_7_right_filter_2.png" width="300">
 
 [IMAGE][IMAGE][IMAGE]
