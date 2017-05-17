@@ -51,11 +51,11 @@ After some tedious manual searching, the network was the following properties:
 * batch_size: 1
 * epochs: 15
 * regularization: only on the last layer (L2, lambda = 10<sup>-4</sup>)
-* loss: Mean-squared error
+* loss: Mean Squared Error (MSE)
 
 Training took less than 10 minutes on my GTX 980.
 
-Here are some plots of mean squared error and mean absolute error, measures of how far away our predictions are.
+Here are some plots of mean squared error and mean absolute error (MAE), measures of how far away our predictions are.
 
 <img src="/res/train_loss.png" width="300" alt="Training Loss"><img src="/res/train_mae.png" width="300" alt="Training Mean Absolute Error"><img src="/res/val_loss.png" width="300" alt="Validation Loss"><img src="/res/val_mae.png" width="300" alt="Validation Mean Absolute Error">
 
@@ -69,7 +69,7 @@ The network reached the following metrics during training
 * MSE_test: 0.0066
 * MAE_test: 0.0539
 
-Here is how the network performed on the unseen test data. 
+Here is how the network performs on the unseen test data. The red cube is what was looked at during training and the blue is the NN output.
 
 <img src="/res/TestData.gif" width="500" alt="Performance on test data">
 
@@ -80,6 +80,21 @@ And here is how it performs over all the data in order.
 ## Visualizing Network
 
 To see what the network learned we run gradient ascent on noise images to maximize the activations of each neuron in our network. These are some that were the most activated.
+
+CONV2_1
+<img src="/res/conv_1_left_filter_1.png" width="300"><img src="/res/conv_1_left_filter_3.png" width="300">
+
+CONV2_2
+<img src="/res/conv_3_left_filter_0.png" width="300"><img src="/res/conv_3_left_filter_3.png" width="300"><img src="/res/conv_1_right_filter_2.png" width="300">
+
+CONV2_4
+<img src="/res/conv_5_left_filter_8.png" width="300"><img src="/res/conv_5_right_filter_8.png" width="300">
+
+CONV2_5
+<img src="/res/conv_6_left_filter_4.png" width="300">
+
+CONV2_6
+<img src="/res/conv_7_right_filter_2.png" width="300">
 
 [IMAGE][IMAGE][IMAGE]
 
