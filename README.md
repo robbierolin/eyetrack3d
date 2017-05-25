@@ -83,23 +83,27 @@ To see what the network learned we run gradient ascent on noise images to maximi
 
 CONV2_1
 
-<img src="/res/conv_1_left_filter_1.png" width="300"> <img src="/res/conv_1_left_filter_3.png" width="300">
+<img src="/res/conv_1_left_filter_7.png" width="300">
 
 CONV2_2
 
-<img src="/res/conv_3_left_filter_0.png" width="300"> <img src="/res/conv_3_left_filter_3.png" width="300"> <img src="/res/conv_3_right_filter_2.png" width="300">
+<img src="/res/conv_3_left_filter_4.png" width="300"> <img src="/res/conv_3_left_filter_15.png" width="300"> 
+
+CONV2_3
+
+<img src="/res/conv_4_left_filter_8.png" width="300"> <img src="/res/conv_4_left_filter_18.png" width="300"> 
 
 CONV2_4
 
-<img src="/res/conv_5_left_filter_8.png" width="300"> <img src="/res/conv_5_right_filter_8.png" width="300">
+<img src="/res/conv_5_left_filter_1.png" width="300"> 
 
 CONV2_5
 
-<img src="/res/conv_6_left_filter_4.png" width="300">
+<img src="/res/conv_6_left_filter_3.png" width="300">
 
 CONV2_6
 
-<img src="/res/conv_7_right_filter_2.png" width="300">
+<img src="/res/conv_7_left_filter_3.png" width="300">
 
 
 ## Conclusions
